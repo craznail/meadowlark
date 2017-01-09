@@ -1,0 +1,26 @@
+{
+  "name": "meadowlark",
+  "version": "1.0.0",
+  "description": "a travel site",
+  "main": "meadowlark.js",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craznail/meadowlark.git"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "craznail",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/craznail/meadowlark/issues"
+  },
+  "homepage": "https://github.com/craznail/meadowlark#readme"
+}
