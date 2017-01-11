@@ -1,25 +1,25 @@
-var express=require('express')
+var express=require('express');
 var app = express();
-var fortune = require('./lib/fortune.js')
+var fortune = require('./lib/fortune.js');
 
 app.set('port',process.env.PORT || 3000);
 
 
 var handlebars = require('express3-handlebars')
     .create({defaultLayout:'main'});
-app.engine('handlebars',handlebars.engine)
+app.engine('handlebars',handlebars.engine);
 app.set('view engine','handlebars');
 
 app.use(function(req,res,next){
     res.locals.showTests=app.get('env')!=='production' && req.query.test==='1';
     next();
-})
+});
 
 app.use(express.static(__dirname+'/public'));
 
 //router
 app.get('/',function(req,res){
-    res.render('home')
+    res.render('home');
 });
 
 app.get('/about',function(req,res){
@@ -49,5 +49,5 @@ app.use(function(err,req,res,next){
 
 app.listen(app.get('port'),function(){
     console.log('Express started on http://localhost:'+
-    app.get('port')+';press Ctrl-C to terminal.')
-})
+    app.get('port')+';press Ctrl-C to terminal.');
+});
